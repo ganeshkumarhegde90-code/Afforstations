@@ -1,0 +1,840 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GreenTrack – Community Afforestation Project | College Eco-Tech Initiative</title>
+  <meta name="description" content="An initiative to plant, protect, and track the growth of trees through technology. Community afforestation project by 4 students.">
+  <meta name="theme-color" content="#0D3B23">
+
+  <!-- Inter Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <!-- Master Stylesheet -->
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!-- =========================================================================
+       1. NAVIGATION BAR
+       ========================================================================= -->
+  <header class="site-nav" role="banner">
+    <div class="container nav-container">
+      <!-- Brand Logo -->
+      <a href="#home" class="nav-brand" aria-label="GreenTrack Homepage">
+        <div class="brand-icon">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.18 2 8 0 5.5-4.78 10-10 10Z"></path>
+            <path d="M2 21c0-3 1.85-5.36 5.08-6C9.5 14.52 12 13 13 12"></path>
+          </svg>
+        </div>
+        <div class="brand-title">
+          <span class="brand-main">GREEN TRACK</span>
+          <span class="brand-tagline">Afforestation Initiative</span>
+        </div>
+      </a>
+
+      <!-- Desktop & Mobile Navigation Links -->
+      <nav class="nav-links" id="site-navigation" aria-label="Main Navigation">
+        <a href="#home" class="active">Home</a>
+        <a href="#mission">About Project</a>
+        <a href="#plants">Our Plants</a>
+        <a href="#growth">Growth Telemetry</a>
+        <a href="#qr-tech">QR Technology</a>
+        <a href="#team">Team</a>
+      </nav>
+
+      <!-- Right Action Items -->
+      <div class="nav-actions">
+        <button class="nav-scan-btn trigger-qr-scanner" aria-label="Scan Plant QR Code">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="3" y="3" width="7" height="7"></rect>
+            <rect x="14" y="3" width="7" height="7"></rect>
+            <rect x="14" y="14" width="7" height="7"></rect>
+            <rect x="3" y="14" width="7" height="7"></rect>
+            <line x1="10" y1="7" x2="10" y2="7.01"></line>
+            <line x1="7" y1="10" x2="7" y2="10.01"></line>
+            <line x1="17" y1="10" x2="17" y2="10.01"></line>
+            <line x1="10" y1="17" x2="10" y2="17.01"></line>
+          </svg>
+          <span>Scan QR</span>
+        </button>
+
+        <!-- Mobile Drawer Hamburger Toggle -->
+        <button class="mobile-menu-toggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="site-navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content">
+
+    <!-- =========================================================================
+         2. HERO SECTION
+         ========================================================================= -->
+    <section class="hero-section" id="home">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Hero Column: Content -->
+          <div class="hero-content fade-on-scroll">
+            <div class="hero-badge">
+              <span class="badge-icon">🌱</span>
+              <span>Community Afforestation Initiative</span>
+            </div>
+
+            <h1 class="hero-heading">
+              Growing a Greener Tomorrow, One Plant at a Time.
+            </h1>
+
+            <p class="hero-subheading">
+              An initiative to plant, protect and track the growth of trees through technology.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#plants" class="btn btn-primary btn-lg">
+                <span>Explore Our Plants</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="5" y1="12" x2="19" y2="12"></line>
+                  <polyline points="12 5 19 12 12 19"></polyline>
+                </svg>
+              </a>
+
+              <button class="btn btn-secondary btn-lg trigger-qr-scanner">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                  <line x1="10" y1="7" x2="10" y2="7.01"></line>
+                  <line x1="7" y1="10" x2="7" y2="10.01"></line>
+                  <line x1="17" y1="10" x2="17" y2="10.01"></line>
+                  <line x1="10" y1="17" x2="10" y2="17.01"></line>
+                </svg>
+                <span>Scan a Plant QR</span>
+              </button>
+            </div>
+
+            <!-- College Metadata Micro-Bar -->
+            <div class="hero-meta-strip">
+              <div class="meta-pill">
+                <span class="meta-pill-dot"></span>
+                <span>Active Field Sector: Quad Zone B</span>
+              </div>
+              <div class="meta-pill">
+                <span class="meta-pill-dot"></span>
+                <span>Protected by 100% Perimeter Fencing</span>
+              </div>
+              <div class="meta-pill">
+                <span class="meta-pill-dot"></span>
+                <span>Live IoT & QR Tagged</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right Hero Column: Realistic Young Tree Visual with Data Telemetry -->
+          <div class="hero-visual-col fade-on-scroll">
+            <div class="hero-image-frame">
+              <img 
+                src="assets/images/hero-tree.jpg" 
+                alt="Young green sapling tree growing inside protective wooden fence with digital UI tracking indicators" 
+                class="hero-tree-img"
+              />
+
+              <!-- Floating UI Card Top Right -->
+              <div class="hero-floating-card hero-card-top-right">
+                <div class="float-icon">🏷️</div>
+                <div class="float-info">
+                  <span class="float-label">Active Plant ID</span>
+                  <span class="float-value">GT-01 (Neem)</span>
+                </div>
+              </div>
+
+              <!-- Floating UI Card Bottom Left -->
+              <div class="hero-floating-card hero-card-bottom-left">
+                <div class="float-icon">📈</div>
+                <div class="float-info">
+                  <span class="float-label">Growth Rate</span>
+                  <span class="float-value">+23 cm Recorded</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         3. PROJECT STATISTICS SECTION (Animated Counters)
+         ========================================================================= -->
+    <section class="statistics-section" id="statistics">
+      <div class="container">
+        <div class="stats-grid fade-on-scroll">
+          
+          <!-- Stat Card 1 -->
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-icon">🌱</span>
+              <span class="stat-badge">Afforestation</span>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="20">0</span>
+            </div>
+            <h4 class="stat-label">Plants Planted</h4>
+            <p class="stat-desc">Indigenous species across campus sectors</p>
+          </div>
+
+          <!-- Stat Card 2 -->
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-icon">📱</span>
+              <span class="stat-badge">Telemetry</span>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="20">0</span>
+            </div>
+            <h4 class="stat-label">QR Tagged</h4>
+            <p class="stat-desc">Unique weatherproof code per plant</p>
+          </div>
+
+          <!-- Stat Card 3 -->
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-icon">🟢</span>
+              <span class="stat-badge">90% Survival</span>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="18">0</span>
+            </div>
+            <h4 class="stat-label">Healthy Plants</h4>
+            <p class="stat-desc">2 saplings under active nurturing care</p>
+          </div>
+
+          <!-- Stat Card 4 -->
+          <div class="stat-card">
+            <div class="stat-header">
+              <span class="stat-icon">👥</span>
+              <span class="stat-badge">Student Team</span>
+            </div>
+            <div class="stat-number-wrapper">
+              <span class="stat-number" data-target="4">0</span>
+            </div>
+            <h4 class="stat-label">Student Members</h4>
+            <p class="stat-desc">Cross-disciplinary college cohort</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         4. OUR MISSION SECTION (Plant. Protect. Track. Grow.)
+         ========================================================================= -->
+    <section class="mission-section" id="mission">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <div class="section-badge">
+            <span class="badge-icon">🌿</span>
+            <span>Our Methodology</span>
+          </div>
+          <h2 class="section-title">Plant. Protect. Track. Grow.</h2>
+          <div class="mission-intro">
+            <p>
+              “We believe planting a tree is only the beginning. GreenTrack combines afforestation with technology to monitor every plant, record its growth and encourage long-term care.”
+            </p>
+          </div>
+        </div>
+
+        <div class="steps-grid fade-on-scroll">
+          
+          <!-- Step 1 -->
+          <div class="step-card">
+            <div class="step-index-row">
+              <div class="step-icon-wrap">🌱</div>
+              <span class="step-number">STEP 01</span>
+            </div>
+            <h3 class="step-title">Plant</h3>
+            <p class="step-text">Plant trees in the selected area.</p>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="step-card">
+            <div class="step-index-row">
+              <div class="step-icon-wrap">🛡️</div>
+              <span class="step-number">STEP 02</span>
+            </div>
+            <h3 class="step-title">Protect</h3>
+            <p class="step-text">Build protective fencing around each plant.</p>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="step-card">
+            <div class="step-index-row">
+              <div class="step-icon-wrap">📱</div>
+              <span class="step-number">STEP 03</span>
+            </div>
+            <h3 class="step-title">Track</h3>
+            <p class="step-text">Attach a unique QR code to every plant.</p>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="step-card">
+            <div class="step-index-row">
+              <div class="step-icon-wrap">📈</div>
+              <span class="step-number">STEP 04</span>
+            </div>
+            <h3 class="step-title">Grow</h3>
+            <p class="step-text">Monitor height, health and growth over time.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         5. FEATURED PLANTS SECTION ("Meet Our Plants")
+         ========================================================================= -->
+    <section class="plants-section" id="plants">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <div class="section-badge">
+            <span class="badge-icon">🌲</span>
+            <span>Campus Flora Catalog</span>
+          </div>
+          <h2 class="section-title">Meet Our Plants</h2>
+          <p class="section-subtitle">
+            Explore the saplings planted across our college grounds. Click any card to inspect full growth telemetry, protective fencing logs, or scan its QR badge.
+          </p>
+        </div>
+
+        <!-- Filter & Search Controls -->
+        <div class="plants-filter-bar fade-on-scroll">
+          <div class="filter-pills" role="tablist" aria-label="Filter Plants by Status">
+            <button class="filter-btn active" data-filter="all">All Plants (20)</button>
+            <button class="filter-btn" data-filter="healthy">🟢 Healthy & Flourishing</button>
+            <button class="filter-btn" data-filter="care">🟡 Under Care (2)</button>
+            <button class="filter-btn" data-filter="fast">🚀 Rapid Growth (+23cm)</button>
+          </div>
+
+          <div class="plants-search-box">
+            <svg class="search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+            <input type="text" id="plant-search-input" placeholder="Search by name, ID (e.g. GT-01)..." aria-label="Search plants">
+          </div>
+        </div>
+
+        <div class="plant-results-meta" id="plant-results-count">
+          Showing 12 tagged plants
+        </div>
+
+        <!-- Plants Dynamic Cards Grid -->
+        <div class="plants-grid" id="plants-grid">
+          <!-- Dynamically populated via plants-data.js and app.js -->
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         6. GROWTH VISUALIZATION SECTION ("Every Centimeter Tells a Story.")
+         ========================================================================= -->
+    <section class="growth-section" id="growth">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <div class="section-badge">
+            <span class="badge-icon">📊</span>
+            <span>Bi-Weekly Telemetry Analytics</span>
+          </div>
+          <h2 class="section-title">Every Centimeter Tells a Story.</h2>
+          <p class="section-subtitle">
+            Regular height audits and health assessments turn routine afforestation into quantifiable environmental regeneration.
+          </p>
+        </div>
+
+        <div class="growth-container-card fade-on-scroll">
+          
+          <!-- Top Control: Plant Selector -->
+          <div class="growth-top-bar">
+            <div class="growth-selector-wrap">
+              <label for="growth-plant-select">Select Plant Telemetry:</label>
+              <select id="growth-plant-select" class="growth-select" aria-label="Select plant for growth telemetry">
+                <!-- Dynamically populated -->
+              </select>
+            </div>
+
+            <div class="growth-badge-status">
+              <span>Bi-weekly physical measurement</span>
+            </div>
+          </div>
+
+          <!-- Growth Transformation Banner -->
+          <div class="growth-metric-banner">
+            <div class="growth-step-box">
+              <span class="growth-step-label">Initial Height</span>
+              <span class="growth-step-val" id="growth-initial-height">25 cm</span>
+            </div>
+
+            <div class="growth-arrow-divider">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </div>
+
+            <div class="growth-step-box">
+              <span class="growth-step-label">Current Height</span>
+              <span class="growth-step-val" id="growth-current-height">48 cm</span>
+            </div>
+
+            <div class="growth-delta-highlight">
+              <span class="growth-delta-val" id="growth-delta">+23 cm Growth</span>
+              <span class="growth-delta-sub" id="growth-percentage">+92% overall growth</span>
+            </div>
+          </div>
+
+          <!-- Dynamic SVG Chart Shell -->
+          <div class="chart-card-shell">
+            <div class="chart-header">
+              <h4 class="chart-title">Sapling Height Trajectory (Over Monitored Weeks)</h4>
+              <div class="chart-legend">
+                <span class="chart-legend-line"></span>
+                <span>Height in Centimeters</span>
+              </div>
+            </div>
+
+            <div class="chart-svg-container" id="growth-chart-svg">
+              <!-- SVG chart rendered dynamically via app.js -->
+            </div>
+
+            <div class="growth-milestones-row" id="growth-milestones">
+              <!-- Milestone badges rendered dynamically -->
+            </div>
+          </div>
+
+          <p class="growth-data-disclaimer">
+            * Note: Verified project telemetry records. Measurements collected bi-weekly by the GreenTrack student monitoring committee.
+          </p>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         7. QR TECHNOLOGY SECTION ("Scan. Discover. Track.")
+         ========================================================================= -->
+    <section class="qr-section" id="qr-tech">
+      <div class="container">
+        
+        <div class="qr-feature-card fade-on-scroll">
+          <div class="qr-grid">
+            
+            <!-- Left Info Column -->
+            <div class="qr-text-col">
+              <div class="section-badge" style="background: rgba(34,197,94,0.15); color: #86EFAC; border-color: rgba(134,239,172,0.3);">
+                <span class="badge-icon">📱</span>
+                <span>Eco-Tech Digital Identity</span>
+              </div>
+              
+              <h2>Scan. Discover. Track.</h2>
+              
+              <p>
+                Every plant has its own digital identity. Scan its QR code to discover when it was planted, how much it has grown and how healthy it is today.
+              </p>
+
+              <div class="qr-features-list">
+                <div class="qr-feat-item">
+                  <span class="qr-feat-check">✓</span>
+                  <span><strong>Zero App Required:</strong> Works seamlessly directly in any modern mobile browser camera.</span>
+                </div>
+                <div class="qr-feat-item">
+                  <span class="qr-feat-check">✓</span>
+                  <span><strong>Tamper-Proof Plates:</strong> Weatherproof QR plaques affixed to each protective wooden fence.</span>
+                </div>
+                <div class="qr-feat-item">
+                  <span class="qr-feat-check">✓</span>
+                  <span><strong>Transparent Telemetry:</strong> Allows any campus student or faculty member to verify plant health.</span>
+                </div>
+              </div>
+
+              <button class="btn btn-primary btn-lg trigger-qr-scanner" style="background-color: #22C55E; color: #0A2416; font-weight: 700;">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3" stroke-linecap="round" stroke-linejoin="round">
+                  <rect x="3" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="3" width="7" height="7"></rect>
+                  <rect x="14" y="14" width="7" height="7"></rect>
+                  <rect x="3" y="14" width="7" height="7"></rect>
+                  <line x1="10" y1="7" x2="10" y2="7.01"></line>
+                  <line x1="7" y1="10" x2="7" y2="10.01"></line>
+                  <line x1="17" y1="10" x2="17" y2="10.01"></line>
+                  <line x1="10" y1="17" x2="10" y2="17.01"></line>
+                </svg>
+                <span>Scan QR Code</span>
+              </button>
+            </div>
+
+            <!-- Right Visual Mockup Column: Stylized QR Plaque Preview -->
+            <div class="qr-preview-col">
+              <div class="qr-plaque-mockup">
+                <div class="qr-plaque-tag">
+                  <span class="plaque-brand">GREEN TRACK 🌱</span>
+                  <span class="plaque-id">GT-01 NEEM</span>
+                </div>
+                
+                <div class="qr-box-center">
+                  <!-- Vector QR Code with GreenTrack Emblem -->
+                  <svg viewBox="0 0 160 160" width="160" height="160" class="qr-svg-matrix" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="160" height="160" fill="#FFFFFF" rx="8" />
+                    <!-- Finders -->
+                    <rect x="15" y="15" width="40" height="40" rx="6" fill="#0D3B23" />
+                    <rect x="23" y="23" width="24" height="24" rx="3" fill="#FFFFFF" />
+                    <rect x="29" y="29" width="12" height="12" rx="2" fill="#15803D" />
+
+                    <rect x="105" y="15" width="40" height="40" rx="6" fill="#0D3B23" />
+                    <rect x="113" y="23" width="24" height="24" rx="3" fill="#FFFFFF" />
+                    <rect x="119" y="29" width="12" height="12" rx="2" fill="#15803D" />
+
+                    <rect x="15" y="105" width="40" height="40" rx="6" fill="#0D3B23" />
+                    <rect x="23" y="113" width="24" height="24" rx="3" fill="#FFFFFF" />
+                    <rect x="29" y="119" width="12" height="12" rx="2" fill="#15803D" />
+
+                    <!-- Grid Data -->
+                    <g fill="#1F3D2B">
+                      <rect x="65" y="18" width="6" height="6" rx="1.5" />
+                      <rect x="75" y="18" width="6" height="6" rx="1.5" />
+                      <rect x="85" y="18" width="6" height="6" rx="1.5" />
+                      <rect x="65" y="28" width="6" height="6" rx="1.5" />
+                      <rect x="85" y="28" width="6" height="6" rx="1.5" />
+                      <rect x="75" y="38" width="6" height="6" rx="1.5" />
+                      <rect x="85" y="48" width="6" height="6" rx="1.5" />
+                      <rect x="18" y="65" width="6" height="6" rx="1.5" />
+                      <rect x="38" y="65" width="6" height="6" rx="1.5" />
+                      <rect x="58" y="65" width="6" height="6" rx="1.5" />
+                      <rect x="95" y="65" width="6" height="6" rx="1.5" />
+                      <rect x="115" y="65" width="6" height="6" rx="1.5" />
+                      <rect x="18" y="75" width="6" height="6" rx="1.5" />
+                      <rect x="38" y="75" width="6" height="6" rx="1.5" />
+                      <rect x="58" y="75" width="6" height="6" rx="1.5" />
+                      <rect x="95" y="75" width="6" height="6" rx="1.5" />
+                      <rect x="115" y="75" width="6" height="6" rx="1.5" />
+                      <rect x="18" y="85" width="6" height="6" rx="1.5" />
+                      <rect x="48" y="85" width="6" height="6" rx="1.5" />
+                      <rect x="105" y="85" width="6" height="6" rx="1.5" />
+                      <rect x="65" y="95" width="6" height="6" rx="1.5" />
+                      <rect x="75" y="95" width="6" height="6" rx="1.5" />
+                      <rect x="105" y="95" width="6" height="6" rx="1.5" />
+                      <rect x="65" y="105" width="6" height="6" rx="1.5" />
+                      <rect x="85" y="105" width="6" height="6" rx="1.5" />
+                      <rect x="105" y="105" width="6" height="6" rx="1.5" />
+                      <rect x="65" y="115" width="6" height="6" rx="1.5" />
+                      <rect x="75" y="115" width="6" height="6" rx="1.5" />
+                      <rect x="115" y="115" width="6" height="6" rx="1.5" />
+                    </g>
+
+                    <!-- Center Badge -->
+                    <circle cx="80" cy="80" r="14" fill="#0D3B23" />
+                    <circle cx="80" cy="80" r="11" fill="#15803D" />
+                    <path d="M78 85 C 75 80, 77 74, 83 72 C 84 76, 83 82, 78 85 Z" fill="#FFFFFF" />
+                  </svg>
+                </div>
+
+                <div class="qr-plaque-meta">
+                  <h4 class="plaque-plant-title">Neem • GT-01</h4>
+                  <p class="plaque-note">Point your smartphone camera to launch plant telemetry profile.</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         8. PROJECT IMPACT SECTION
+         ========================================================================= -->
+    <section class="impact-section" id="impact">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <div class="section-badge">
+            <span class="badge-icon">🌍</span>
+            <span>Measurable Eco-Footprint</span>
+          </div>
+          <h2 class="section-title">Campus Afforestation Impact</h2>
+          <p class="section-subtitle">
+            Demonstrating how college student initiatives can yield tangible ecological milestones with technology and sustained physical stewardship.
+          </p>
+        </div>
+
+        <div class="impact-grid fade-on-scroll">
+          
+          <!-- Impact Card 1: Trees Planted -->
+          <div class="impact-card">
+            <div class="impact-icon-wrap">🌳</div>
+            <div class="impact-metric">20 Saplings</div>
+            <h3 class="impact-title">Trees Planted</h3>
+            <p class="impact-desc">Biodiverse mix of medicinal, shade canopy, and native hardwood trees across campus zones.</p>
+          </div>
+
+          <!-- Impact Card 2: Trees Protected -->
+          <div class="impact-card">
+            <div class="impact-icon-wrap">🛡️</div>
+            <div class="impact-metric">100% Guarded</div>
+            <h3 class="impact-title">Trees Protected</h3>
+            <p class="impact-desc">Protective timber and steel mesh fencing engineered to shield young plants from grazing and trampling.</p>
+          </div>
+
+          <!-- Impact Card 3: Growth Records -->
+          <div class="impact-card">
+            <div class="impact-icon-wrap">📊</div>
+            <div class="impact-metric">84+ Records</div>
+            <h3 class="impact-title">Growth Records</h3>
+            <p class="impact-desc">Bi-weekly telemetry logs tracking vertical height, foliage expansion, and soil hydration.</p>
+          </div>
+
+          <!-- Impact Card 4: Students Involved -->
+          <div class="impact-card">
+            <div class="impact-icon-wrap">🌍</div>
+            <div class="impact-metric">4 Students</div>
+            <h3 class="impact-title">Students Involved</h3>
+            <p class="impact-desc">A committed multidisciplinary student team uniting biology, civil framing, and software tracking.</p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =========================================================================
+         9. TEAM SECTION ("The Team Behind GreenTrack")
+         ========================================================================= -->
+    <section class="team-section" id="team">
+      <div class="container">
+        
+        <div class="section-header fade-on-scroll">
+          <div class="section-badge">
+            <span class="badge-icon">🎓</span>
+            <span>College Student Cohort</span>
+          </div>
+          <h2 class="section-title">The Team Behind GreenTrack</h2>
+          <p class="section-subtitle">
+            4 students. One mission. A greener future.
+          </p>
+        </div>
+
+        <div class="team-grid fade-on-scroll">
+          
+          <!-- Team Member 01 -->
+          <article class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80" alt="Arjun Verma" class="team-avatar-img">
+            </div>
+            <h3 class="team-name">Arjun Verma</h3>
+            <div class="team-role">Tech & System Architecture</div>
+            <p class="team-dept">Dept of Computer Science (Year 3)</p>
+            <p class="team-contrib">Architected the QR identification schema, mobile telemetry portal, and plant data infrastructure.</p>
+            <div class="team-socials">
+              <a href="https://github.com" target="_blank" rel="noopener" class="team-social-link" title="GitHub profile" aria-label="Arjun Verma GitHub">GH</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" title="LinkedIn profile" aria-label="Arjun Verma LinkedIn">IN</a>
+            </div>
+          </article>
+
+          <!-- Team Member 02 -->
+          <article class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80" alt="Priya Sundaram" class="team-avatar-img">
+            </div>
+            <h3 class="team-name">Priya Sundaram</h3>
+            <div class="team-role">Botany Liaison & Soil Care</div>
+            <p class="team-dept">Dept of Environmental Science (Year 3)</p>
+            <p class="team-contrib">Curated native indigenous species selection, soil nutrient prep, and sapling vitality protocols.</p>
+            <div class="team-socials">
+              <a href="https://github.com" target="_blank" rel="noopener" class="team-social-link" title="GitHub profile" aria-label="Priya Sundaram GitHub">GH</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" title="LinkedIn profile" aria-label="Priya Sundaram LinkedIn">IN</a>
+            </div>
+          </article>
+
+          <!-- Team Member 03 -->
+          <article class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80" alt="Rohan Kulkarni" class="team-avatar-img">
+            </div>
+            <h3 class="team-name">Rohan Kulkarni</h3>
+            <div class="team-role">Field Ops & Protective Fencing</div>
+            <p class="team-dept">Dept of Civil Engineering (Year 3)</p>
+            <p class="team-contrib">Engineered and built the weather-resistant bamboo and steel enclosures protecting all 20 plants.</p>
+            <div class="team-socials">
+              <a href="https://github.com" target="_blank" rel="noopener" class="team-social-link" title="GitHub profile" aria-label="Rohan Kulkarni GitHub">GH</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" title="LinkedIn profile" aria-label="Rohan Kulkarni LinkedIn">IN</a>
+            </div>
+          </article>
+
+          <!-- Team Member 04 -->
+          <article class="team-card">
+            <div class="team-avatar-wrap">
+              <img src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80" alt="Kavya Menon" class="team-avatar-img">
+            </div>
+            <h3 class="team-name">Kavya Menon</h3>
+            <div class="team-role">Growth Telemetry & Analytics</div>
+            <p class="team-dept">Dept of Information Technology (Year 3)</p>
+            <p class="team-contrib">Conducts bi-weekly height logs, audits photographic growth histories, and leads community audits.</p>
+            <div class="team-socials">
+              <a href="https://github.com" target="_blank" rel="noopener" class="team-social-link" title="GitHub profile" aria-label="Kavya Menon GitHub">GH</a>
+              <a href="https://linkedin.com" target="_blank" rel="noopener" class="team-social-link" title="LinkedIn profile" aria-label="Kavya Menon LinkedIn">IN</a>
+            </div>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- =========================================================================
+       10. FOOTER
+       ========================================================================= -->
+  <footer class="site-footer" role="contentinfo">
+    <div class="container">
+      
+      <div class="footer-top-grid">
+        
+        <div class="footer-brand">
+          <h3>GREEN TRACK</h3>
+          <p class="footer-motto">“Plant today. Protect tomorrow.”</p>
+          <p class="footer-desc">
+            A technology-driven afforestation initiative engineered by 4 college students to plant, protect, and transparently track campus tree growth.
+          </p>
+        </div>
+
+        <div class="footer-col">
+          <h4>Navigation</h4>
+          <ul class="footer-nav-list">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#plants">Our Plants</a></li>
+            <li><a href="#mission">About Project</a></li>
+            <li><a href="#growth">Growth Telemetry</a></li>
+            <li><a href="#team">Team</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <div class="footer-badge-box">
+            <span class="footer-badge-title">🌱 Campus Afforestation Sector</span>
+            <p class="footer-badge-text">
+              Zones A, B, C & D • South Quad & Eco Park<br>
+              Protected Area: 1,400 sq. meters<br>
+              QR Scanner Support: 100% Active
+            </p>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <div>
+          <span>Community Afforestation Project | 2026</span>
+        </div>
+        <div>
+          <span>Built with eco-tech passion by Arjun, Priya, Rohan & Kavya</span>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- =========================================================================
+       11. MODAL: PLANT DETAIL WITH TELEMETRY & GROWTH TIMELINE
+       ========================================================================= -->
+  <div class="modal-overlay" id="plant-detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-plant-title">
+    <div class="modal-backdrop"></div>
+    <div class="modal-dialog">
+      <button class="modal-close-icon" id="modal-close-btn" aria-label="Close plant detail dialog">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body" id="modal-body-dynamic">
+        <!-- Injected via app.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- =========================================================================
+       12. MODAL: INTERACTIVE QR SCANNER & SIMULATOR
+       ========================================================================= -->
+  <div class="modal-overlay" id="qr-scanner-modal" role="dialog" aria-modal="true" aria-label="Scan Plant QR Code">
+    <div class="scanner-backdrop"></div>
+    <div class="modal-dialog scanner-dialog">
+      <button class="modal-close-icon" id="scanner-close-btn" aria-label="Close QR scanner modal">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+          <line x1="18" y1="6" x2="6" y2="18"></line>
+          <line x1="6" y1="6" x2="18" y2="18"></line>
+        </svg>
+      </button>
+
+      <div class="modal-body">
+        <div style="text-align: center; margin-bottom: 20px;">
+          <span class="section-badge" style="margin-bottom: 8px;">📷 Live Optical Scanner</span>
+          <h3 style="font-size: 1.45rem; color: var(--color-primary-dark);">Scan Plant QR Plaque</h3>
+          <p style="font-size: 0.88rem; color: var(--text-muted);">
+            Point your smartphone camera at any plant's physical fence badge, or use the instant test simulator below.
+          </p>
+        </div>
+
+        <!-- Scanner Viewfinder Box with Laser Animation -->
+        <div class="scanner-viewfinder">
+          <div class="laser-line"></div>
+          <div class="viewfinder-corner corner-tl"></div>
+          <div class="viewfinder-corner corner-tr"></div>
+          <div class="viewfinder-corner corner-bl"></div>
+          <div class="viewfinder-corner corner-br"></div>
+          <div class="viewfinder-hint">
+            <span>Align QR code within optical markers</span>
+          </div>
+        </div>
+
+        <!-- Fast Test Simulator Chips -->
+        <div class="scanner-quick-demos">
+          <h5>Instant Demo Scanner (Click to Test):</h5>
+          <div class="quick-scan-chips-row">
+            <button class="quick-scan-chip" data-id="GT-01">🌿 Test Neem (GT-01)</button>
+            <button class="quick-scan-chip" data-id="GT-02">🌸 Test Gulmohar (GT-02)</button>
+            <button class="quick-scan-chip" data-id="GT-03">🍃 Test Peepal (GT-03)</button>
+            <button class="quick-scan-chip" data-id="GT-05">🪵 Test Teak (GT-05)</button>
+            <button class="quick-scan-chip" data-id="GT-07">🍇 Test Jamun (GT-07)</button>
+          </div>
+        </div>
+
+        <!-- Manual ID Input -->
+        <div style="margin-top: 20px; padding-top: 16px; border-top: 1px solid var(--color-border-subtle);">
+          <label for="manual-plant-id-input" style="display: block; font-size: 0.82rem; font-weight: 600; color: var(--text-muted); margin-bottom: 8px;">Or Enter Plant Tag Manually:</label>
+          <div class="manual-id-input-group">
+            <input type="text" id="manual-plant-id-input" placeholder="e.g. GT-01 or 01" maxlength="6" aria-label="Enter plant tag manually">
+            <button id="manual-plant-id-submit" class="btn btn-primary btn-sm">Lookup</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scripts -->
+  <script src="js/plants-data.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>

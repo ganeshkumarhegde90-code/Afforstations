@@ -1,0 +1,476 @@
+/**
+ * GreenTrack – Community Afforestation Project
+ * Core Plant Dataset
+ * 
+ * Reusable data structure designed to power:
+ * 1. Homepage showcase & search
+ * 2. Plant listing directory
+ * 3. Individual QR plant profiles
+ * 4. Growth history analytics
+ * 5. Future Admin Dashboard & API integrations
+ */
+
+const GREEN_TRACK_PLANTS = [
+  {
+    id: "GT-01",
+    name: "Neem",
+    botanicalName: "Azadirachta indica",
+    category: "Medicinal & Shade",
+    plantedDate: "2026-08-12",
+    displayDate: "12 Aug 2026",
+    initialHeight: 25, // in cm
+    currentHeight: 48, // in cm
+    growth: 23,        // in cm
+    growthRate: "+4.1 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 97,   // percentage
+    soilMoisture: "78%",
+    sunlightExposure: "Full Sun (6-8 hrs)",
+    zone: "Zone A – South Quad Green Belt",
+    coordinates: "12.9716° N, 77.5946° E",
+    fencingType: "Treated Timber & Wire Mesh Guard",
+    fencingStatus: "Secure & Stable",
+    plantedBy: "Cohort Group 1 (Arjun & Priya)",
+    lastInspected: "2026-10-04",
+    image: "https://images.unsplash.com/photo-1542273917363-3b1817f69a2d?auto=format&fit=crop&w=800&q=80",
+    tags: ["High Resilience", "Natural Pesticide", "Air Purifier"],
+    description: "Famous for its medicinal virtues and dense shade, this Neem sapling has adapted briskly to the campus soil with active shoot branching and zero pest damage.",
+    growthHistory: [
+      { date: "12 Aug 2026", height: 25, note: "Initial planting and protective fence installation." },
+      { date: "26 Aug 2026", height: 29, note: "Post-transplant shock passed; root system stabilized." },
+      { date: "09 Sep 2026", height: 35, note: "Organic vermicompost applied around root perimeter." },
+      { date: "23 Sep 2026", height: 42, note: "Rapid apical growth after steady monsoon showers." },
+      { date: "04 Oct 2026", height: 48, note: "Fencing checked and tied; crown foliage expanding." }
+    ]
+  },
+  {
+    id: "GT-02",
+    name: "Gulmohar",
+    botanicalName: "Delonix regia",
+    category: "Canopy & Flowering",
+    plantedDate: "2026-08-12",
+    displayDate: "12 Aug 2026",
+    initialHeight: 30,
+    currentHeight: 56,
+    growth: 26,
+    growthRate: "+4.8 cm/mo",
+    healthStatus: "Flourishing",
+    healthClass: "flourishing",
+    healthScore: 99,
+    soilMoisture: "72%",
+    sunlightExposure: "Full Sun (7 hrs)",
+    zone: "Zone A – South Quad Green Belt",
+    coordinates: "12.9718° N, 77.5948° E",
+    fencingType: "Heavy-gauge Mesh with Wooden Stakes",
+    fencingStatus: "Reinforced",
+    plantedBy: "Cohort Group 1 (Kavya & Rohan)",
+    lastInspected: "2026-10-04",
+    image: "https://images.unsplash.com/photo-1502082553048-f009c37129b9?auto=format&fit=crop&w=800&q=80",
+    tags: ["Ornamental", "Rapid Growth", "Dense Shade"],
+    description: "The Royal Poinciana sapling exhibits vigorous upward growth with graceful bipinnate leaves. It will form an umbrella canopy over the campus walking path.",
+    growthHistory: [
+      { date: "12 Aug 2026", height: 30, note: "Planted along walkway border with circular fence." },
+      { date: "26 Aug 2026", height: 36, note: "Early side branching started; healthy dark green leaves." },
+      { date: "09 Sep 2026", height: 43, note: "Mulch layer refreshed to retain soil moisture." },
+      { date: "23 Sep 2026", height: 50, note: "Remarkable +7cm surge during warm sunny spell." },
+      { date: "04 Oct 2026", height: 56, note: "Stake guide re-adjusted to ensure straight stem." }
+    ]
+  },
+  {
+    id: "GT-03",
+    name: "Peepal",
+    botanicalName: "Ficus religiosa",
+    category: "Heritage & Biodiversity",
+    plantedDate: "2026-08-14",
+    displayDate: "14 Aug 2026",
+    initialHeight: 28,
+    currentHeight: 49,
+    growth: 21,
+    growthRate: "+3.9 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 95,
+    soilMoisture: "69%",
+    sunlightExposure: "Full Sun (8 hrs)",
+    zone: "Zone B – Central Eco Park",
+    coordinates: "12.9722° N, 77.5951° E",
+    fencingType: "Galvanized Hex Fencing with Bamboo Posts",
+    fencingStatus: "Good Condition",
+    plantedBy: "All 4 Team Members",
+    lastInspected: "2026-10-03",
+    image: "https://images.unsplash.com/photo-1513836279014-a89f7a76ae86?auto=format&fit=crop&w=800&q=80",
+    tags: ["Continuous Oxygen", "Sacred Fig", "Bird Habitat"],
+    description: "The sacred fig is a powerhouse for local ecology, recognized for releasing oxygen round-the-clock and creating a home for campus birds and pollinators.",
+    growthHistory: [
+      { date: "14 Aug 2026", height: 28, note: "Deep pit planting with organic compost." },
+      { date: "28 Aug 2026", height: 32, note: "Distinctive heart-shaped leaves unfurling." },
+      { date: "12 Sep 2026", height: 38, note: "Secondary lateral branch developing nicely." },
+      { date: "26 Sep 2026", height: 44, note: "Drip watering ring maintained around base." },
+      { date: "03 Oct 2026", height: 49, note: "Stem thickening verified; bark healthy." }
+    ]
+  },
+  {
+    id: "GT-04",
+    name: "Banyan",
+    botanicalName: "Ficus benghalensis",
+    category: "Heritage & Biodiversity",
+    plantedDate: "2026-08-14",
+    displayDate: "14 Aug 2026",
+    initialHeight: 32,
+    currentHeight: 51,
+    growth: 19,
+    growthRate: "+3.5 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 94,
+    soilMoisture: "75%",
+    sunlightExposure: "Partial to Full Sun",
+    zone: "Zone B – Central Eco Park",
+    coordinates: "12.9725° N, 77.5954° E",
+    fencingType: "Wide Perimeter Wooden Picket Cage",
+    fencingStatus: "Secure",
+    plantedBy: "Arjun & Rohan",
+    lastInspected: "2026-10-03",
+    image: "https://images.unsplash.com/photo-1448375240586-882707db888b?auto=format&fit=crop&w=800&q=80",
+    tags: ["National Tree", "Keystone Species", "Long-lived"],
+    description: "Planted in an expansive open quad where its future aerial roots can establish naturally. Shows strong stem girth and leathery deep green leaves.",
+    growthHistory: [
+      { date: "14 Aug 2026", height: 32, note: "Wide radius fencing installed for future spread." },
+      { date: "28 Aug 2026", height: 35, note: "Root establishment confirmed; new bud visible." },
+      { date: "12 Sep 2026", height: 41, note: "Two sturdy top branches forming symmetrical crown." },
+      { date: "26 Sep 2026", height: 47, note: "Soil aerated gently around root zone." },
+      { date: "03 Oct 2026", height: 51, note: "Stem caliper increased by 0.4cm." }
+    ]
+  },
+  {
+    id: "GT-05",
+    name: "Teak",
+    botanicalName: "Tectona grandis",
+    category: "Native Hardwood",
+    plantedDate: "2026-08-16",
+    displayDate: "16 Aug 2026",
+    initialHeight: 22,
+    currentHeight: 46,
+    growth: 24,
+    growthRate: "+4.4 cm/mo",
+    healthStatus: "Flourishing",
+    healthClass: "flourishing",
+    healthScore: 98,
+    soilMoisture: "68%",
+    sunlightExposure: "Full Sun (8 hrs)",
+    zone: "Zone C – Forestry Boundary",
+    coordinates: "12.9730° N, 77.5960° E",
+    fencingType: "High Wire Guard with Metal Stakes",
+    fencingStatus: "Optimal",
+    plantedBy: "Priya & Kavya",
+    lastInspected: "2026-10-02",
+    image: "https://images.unsplash.com/photo-1473448912268-2022ce9509d8?auto=format&fit=crop&w=800&q=80",
+    tags: ["Durable Wood", "Broad Leaf", "Carbon Sink"],
+    description: "Massive broad leaves capture bountiful solar energy, resulting in rapid vertical spurts. One of the top-performing saplings in vertical velocity.",
+    growthHistory: [
+      { date: "16 Aug 2026", height: 22, note: "Planted with mycorrhizal fungi soil inoculant." },
+      { date: "30 Aug 2026", height: 27, note: "First pair of broad juvenile leaves expanded." },
+      { date: "14 Sep 2026", height: 34, note: "Strong central leader growing upright." },
+      { date: "28 Sep 2026", height: 41, note: "Rain catchment pit deepened slightly." },
+      { date: "02 Oct 2026", height: 46, note: "Excellent leaf color and robust shoot." }
+    ]
+  },
+  {
+    id: "GT-06",
+    name: "Indian Gooseberry (Amla)",
+    botanicalName: "Phyllanthus emblica",
+    category: "Medicinal & Fruit",
+    plantedDate: "2026-08-16",
+    displayDate: "16 Aug 2026",
+    initialHeight: 24,
+    currentHeight: 40,
+    growth: 16,
+    growthRate: "+3.0 cm/mo",
+    healthStatus: "Under Care",
+    healthClass: "care",
+    healthScore: 82,
+    soilMoisture: "61%",
+    sunlightExposure: "Full Sun",
+    zone: "Zone C – Forestry Boundary",
+    coordinates: "12.9732° N, 77.5963° E",
+    fencingType: "Reinforced Bamboo Cage",
+    fencingStatus: "Inspection Passed",
+    plantedBy: "Arjun & Priya",
+    lastInspected: "2026-10-05",
+    image: "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?auto=format&fit=crop&w=800&q=80",
+    tags: ["High Vitamin C", "Traditional Medicine", "Drought Tolerant"],
+    description: "Showed mild heat sensitivity during the late September dry stretch. Under active care protocol with light shade cloth and organic liquid seaweed spray.",
+    growthHistory: [
+      { date: "16 Aug 2026", height: 24, note: "Planted along sunny terrace boundary." },
+      { date: "30 Aug 2026", height: 28, note: "Feathery foliage establishing." },
+      { date: "14 Sep 2026", height: 33, note: "Slight leaf tip browning noticed from wind." },
+      { date: "28 Sep 2026", height: 37, note: "Added temporary shade mesh & foliar nourishment." },
+      { date: "05 Oct 2026", height: 40, note: "Fresh green shoots emerging; recovery positive." }
+    ]
+  },
+  {
+    id: "GT-07",
+    name: "Jamun (Black Plum)",
+    botanicalName: "Syzygium cumini",
+    category: "Fruiting & Biodiversity",
+    plantedDate: "2026-08-18",
+    displayDate: "18 Aug 2026",
+    initialHeight: 26,
+    currentHeight: 47,
+    growth: 21,
+    growthRate: "+4.0 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 96,
+    soilMoisture: "76%",
+    sunlightExposure: "Full Sun (6 hrs)",
+    zone: "Zone A – South Quad Green Belt",
+    coordinates: "12.9719° N, 77.5944° E",
+    fencingType: "Galvanized Metal Netting with Wood Stakes",
+    fencingStatus: "Secure",
+    plantedBy: "Rohan & Kavya",
+    lastInspected: "2026-10-04",
+    image: "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?auto=format&fit=crop&w=800&q=80",
+    tags: ["Fruit Bearing", "Bird Attractor", "High Canopy"],
+    description: "Dense, glossy dark-green leaves indicate peak photosynthesis. Jamun trees attract local campus parakeets and bees once mature.",
+    growthHistory: [
+      { date: "18 Aug 2026", height: 26, note: "Planted near drainage swale for moist soil conditions." },
+      { date: "01 Sep 2026", height: 31, note: "Healthy foliage flush with reddish new leaves." },
+      { date: "15 Sep 2026", height: 37, note: "Mulch layer topped with dried leaves." },
+      { date: "29 Sep 2026", height: 43, note: "Active apical leader; stems sturdy." },
+      { date: "04 Oct 2026", height: 47, note: "Fence inspected; zero animal intrusion." }
+    ]
+  },
+  {
+    id: "GT-08",
+    name: "Pongamia (Karanja)",
+    botanicalName: "Millettia pinnata",
+    category: "Nitrogen Fixing",
+    plantedDate: "2026-08-18",
+    displayDate: "18 Aug 2026",
+    initialHeight: 27,
+    currentHeight: 52,
+    growth: 25,
+    growthRate: "+4.7 cm/mo",
+    healthStatus: "Flourishing",
+    healthClass: "flourishing",
+    healthScore: 99,
+    soilMoisture: "71%",
+    sunlightExposure: "Full Sun (8 hrs)",
+    zone: "Zone B – Central Eco Park",
+    coordinates: "12.9723° N, 77.5949° E",
+    fencingType: "Square Wire Mesh Fencing with Corner Anchors",
+    fencingStatus: "Sturdy",
+    plantedBy: "Arjun & Rohan",
+    lastInspected: "2026-10-04",
+    image: "https://images.unsplash.com/photo-1426604966848-d7adac402bff?auto=format&fit=crop&w=800&q=80",
+    tags: ["Soil Restorer", "Nitrogen Fixer", "Biofuel Seed"],
+    description: "A fast-growing indigenous legume tree known for its ability to fix atmospheric nitrogen and enrich depleted soil naturally.",
+    growthHistory: [
+      { date: "18 Aug 2026", height: 27, note: "Planted in slightly compact clay area to regenerate soil." },
+      { date: "01 Sep 2026", height: 33, note: "Rapid adaptation; roots breaking through subsoil." },
+      { date: "15 Sep 2026", height: 40, note: "Lush pinnate leaves providing ground shade." },
+      { date: "29 Sep 2026", height: 47, note: "Excellent branch development." },
+      { date: "04 Oct 2026", height: 52, note: "Soil health testing showed elevated nitrogen." }
+    ]
+  },
+  {
+    id: "GT-09",
+    name: "Ashoka Tree",
+    botanicalName: "Saraca asoca",
+    category: "Medicinal & Sacred",
+    plantedDate: "2026-08-20",
+    displayDate: "20 Aug 2026",
+    initialHeight: 23,
+    currentHeight: 41,
+    growth: 18,
+    growthRate: "+3.6 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 93,
+    soilMoisture: "75%",
+    sunlightExposure: "Partial Shade / Filtered Light",
+    zone: "Zone D – Library Eco Pavilion",
+    coordinates: "12.9712° N, 77.5938° E",
+    fencingType: "Timber Slat Protective Enclosure",
+    fencingStatus: "Sound & Stable",
+    plantedBy: "Kavya & Priya",
+    lastInspected: "2026-10-05",
+    image: "https://images.unsplash.com/photo-1518531933037-91b2f5f229cc?auto=format&fit=crop&w=800&q=80",
+    tags: ["Rainforest Native", "Fragrant Blooms", "Medicinal Bark"],
+    description: "True native Ashoka tree prized for its fragrant orange-yellow blossoms and dense evergreen canopy. Thrives in the sheltered pavilion alcove.",
+    growthHistory: [
+      { date: "20 Aug 2026", height: 23, note: "Planted in shaded quad near Library courtyard." },
+      { date: "03 Sep 2026", height: 27, note: "Tender copper-colored young leaves displayed." },
+      { date: "17 Sep 2026", height: 32, note: "Moisture levels maintained via organic straw mulch." },
+      { date: "01 Oct 2026", height: 38, note: "Foliage transitioned to deep glossy green." },
+      { date: "05 Oct 2026", height: 41, note: "Uniform growth and strong apical shoot." }
+    ]
+  },
+  {
+    id: "GT-10",
+    name: "Mahua",
+    botanicalName: "Madhuca longifolia",
+    category: "Indigenous Forest Tree",
+    plantedDate: "2026-08-20",
+    displayDate: "20 Aug 2026",
+    initialHeight: 21,
+    currentHeight: 38,
+    growth: 17,
+    growthRate: "+3.4 cm/mo",
+    healthStatus: "Under Care",
+    healthClass: "care",
+    healthScore: 84,
+    soilMoisture: "65%",
+    sunlightExposure: "Full Sun",
+    zone: "Zone C – Forestry Boundary",
+    coordinates: "12.9734° N, 77.5966° E",
+    fencingType: "Reinforced Bamboo Cage",
+    fencingStatus: "Secured",
+    plantedBy: "Rohan & Arjun",
+    lastInspected: "2026-10-03",
+    image: "https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=800&q=80",
+    tags: ["Tribal Heritage", "Nectar Rich", "Hardy"],
+    description: "Slow-starting but deeply resilient forest tree. Received bio-stimulant root boost after mild transplant hesitation, now producing firm new shoots.",
+    growthHistory: [
+      { date: "20 Aug 2026", height: 21, note: "Planted on boundary edge with deep root basin." },
+      { date: "03 Sep 2026", height: 24, note: "Acclimatizing to local dry soil conditions." },
+      { date: "17 Sep 2026", height: 29, note: "Liquid bio-fertilizer drenches administered." },
+      { date: "01 Oct 2026", height: 35, note: "Promising new leaf whorl spotted." },
+      { date: "03 Oct 2026", height: 38, note: "Stem sturdiness improved; monitor weekly." }
+    ]
+  },
+  {
+    id: "GT-11",
+    name: "Red Sandalwood",
+    botanicalName: "Pterocarpus santalinus",
+    category: "Endemic Timber",
+    plantedDate: "2026-08-22",
+    displayDate: "22 Aug 2026",
+    initialHeight: 20,
+    currentHeight: 39,
+    growth: 19,
+    growthRate: "+3.9 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 92,
+    soilMoisture: "67%",
+    sunlightExposure: "Full Sun (7 hrs)",
+    zone: "Zone B – Central Eco Park",
+    coordinates: "12.9727° N, 77.5956° E",
+    fencingType: "Lockable High-mesh Security Enclosure",
+    fencingStatus: "Secured",
+    plantedBy: "All 4 Team Members",
+    lastInspected: "2026-10-04",
+    image: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=800&q=80",
+    tags: ["Conservation Priority", "Endemic", "Precious Flora"],
+    description: "An endangered native species conserved under special protective fencing. Excellent survival rate with firm root anchoring in stony red loam.",
+    growthHistory: [
+      { date: "22 Aug 2026", height: 20, note: "Special conservation sapling planted with campus botanist." },
+      { date: "05 Sep 2026", height: 25, note: "First flush of trifoliate leaves established." },
+      { date: "19 Sep 2026", height: 31, note: "Protective mesh cage inspected and padlocked." },
+      { date: "02 Oct 2026", height: 36, note: "Soil aerated; zero aphid presence." },
+      { date: "04 Oct 2026", height: 39, note: "Healthy apical tip with fresh active bud." }
+    ]
+  },
+  {
+    id: "GT-12",
+    name: "Country Gooseberry (Haritaki)",
+    botanicalName: "Terminalia chebula",
+    category: "Medicinal Triphala",
+    plantedDate: "2026-08-22",
+    displayDate: "22 Aug 2026",
+    initialHeight: 25,
+    currentHeight: 45,
+    growth: 20,
+    growthRate: "+4.1 cm/mo",
+    healthStatus: "Healthy",
+    healthClass: "healthy",
+    healthScore: 95,
+    soilMoisture: "70%",
+    sunlightExposure: "Full Sun",
+    zone: "Zone A – South Quad Green Belt",
+    coordinates: "12.9715° N, 77.5942° E",
+    fencingType: "Timber Stake & Steel Wire Cage",
+    fencingStatus: "Firm",
+    plantedBy: "Priya & Rohan",
+    lastInspected: "2026-10-04",
+    image: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=800&q=80",
+    tags: ["Ayurvedic Staple", "Soil Binder", "Wildlife Safe"],
+    description: "Integral component of the traditional Triphala medicine. Shows steady vertical stem strengthening and robust pest resistance.",
+    growthHistory: [
+      { date: "22 Aug 2026", height: 25, note: "Planting completed with leaf mold mix." },
+      { date: "05 Sep 2026", height: 30, note: "Terminal shoot active and upright." },
+      { date: "19 Sep 2026", height: 36, note: "Weeds cleared within 1m radius." },
+      { date: "02 Oct 2026", height: 42, note: "Side branches elongating evenly." },
+      { date: "04 Oct 2026", height: 45, note: "Fence stakes checked after heavy winds." }
+    ]
+  }
+];
+
+/**
+ * Summary Statistics for GreenTrack Project
+ */
+const PROJECT_STATS = {
+  totalPlanted: 20,
+  totalQREnabled: 20,
+  totalHealthy: 18,
+  underCare: 2,
+  studentTeamCount: 4,
+  averageGrowthCm: 21.2,
+  fencingCoveragePercent: 100,
+  inspectionUpdatesLogged: 84,
+  campusZones: ["Zone A – South Quad", "Zone B – Central Eco Park", "Zone C – Forestry Boundary", "Zone D – Library Eco Pavilion"]
+};
+
+/**
+ * Student Team Members Info
+ */
+const TEAM_MEMBERS = [
+  {
+    id: "tm-01",
+    name: "Arjun Verma",
+    role: "Project Lead & Tech Architecture",
+    dept: "Computer Science & Engineering (Year 3)",
+    contribution: "Engineered QR identity routing, telemetry database schema, and mobile portal.",
+    avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=400&q=80",
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
+  },
+  {
+    id: "tm-02",
+    name: "Priya Sundaram",
+    role: "Botany Liaison & Soil Assessment",
+    dept: "Environmental Sciences & Biotechnology (Year 3)",
+    contribution: "Curated indigenous species selection, soil nutrient testing, and sapling health monitoring.",
+    avatar: "https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&fit=crop&w=400&q=80",
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
+  },
+  {
+    id: "tm-03",
+    name: "Rohan Kulkarni",
+    role: "Field Operations & Protective Enclosures",
+    dept: "Civil & Structural Engineering (Year 3)",
+    contribution: "Designed and constructed the protective bamboo-steel fences guarding all 20 saplings.",
+    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=400&q=80",
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
+  },
+  {
+    id: "tm-04",
+    name: "Kavya Menon",
+    role: "Growth Telemetry & Community Outreach",
+    dept: "Information Technology (Year 3)",
+    contribution: "Logs bi-weekly height measurements, documents photographic timelines, and coordinates student volunteers.",
+    avatar: "https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=400&q=80",
+    github: "https://github.com",
+    linkedin: "https://linkedin.com"
+  }
+];
+
+// Export for ES module or standard browser script
+if (typeof module !== 'undefined' && module.exports) {
+  module.exports = { GREEN_TRACK_PLANTS, PROJECT_STATS, TEAM_MEMBERS };
+}
